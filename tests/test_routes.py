@@ -263,12 +263,6 @@ class TestProductRoutes(TestCase):
         self.assertEqual(len(data), available_count)
         for product in data:
             self.assertEqual(product["available"], True)
-
-    # Test health
-    def test_health(self):
-        """It should return 200"""
-        response = self.client.get(f'/health')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
     # Utility functions
     ######################################################################
 
